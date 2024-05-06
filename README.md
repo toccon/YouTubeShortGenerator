@@ -1,6 +1,6 @@
 # YoutubeShortGenerator
 
-Welcome to YoutubeShortGenerator, a Python project designed to automate the creation of YouTube short videos. This tool leverages the MoviePy library for video editing and Google Text-to-Speech (gTTS) for generating captions.
+Welcome to YoutubeShortGenerator, a Python project designed to automate the creation of YouTube short videos. This tool leverages the MoviePy library for video editing and Google Text-to-Speech (gTTS) for text to speech conversion. 
 
 ## Dependencies
 
