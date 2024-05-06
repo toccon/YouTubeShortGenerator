@@ -117,38 +117,3 @@ def generate_looping_background_video(totalVideoLength, averageVideoLength, vide
     finalVideo.write_videofile(f"video-editor-output/{random_video_name}.mp4")
     finalVideo.close()
     return random_video_name
-
-def main():
-
-    videoNames = []
-    while len(videoNames) < 11:
-        videoName = choose_random_video(f"background-videos/iwotd/uncut")
-        if videoNames.__contains__(videoName):
-            continue
-        currentVideo = VideoFileClip(f"background-videos/iwotd/uncut/{videoName}")
-        videoNames.append(videoName)
-        currentVideoTenSeconds = currentVideo.subclip(0,10)
-        currentVideoTenSeconds.write_videofile(f"background-videos/iwotd/10seconds/{videoName}.mp4")
-        currentVideo.close()
-        currentVideoTenSeconds.close()
-
-
-
-    # generate_looping_background_video(24, 10, "background-videos/italian/10seconds")
-
-
-
-    # video_name = input("Enter the video file name from directory background-videos-uncut that you would like to edit (without .mp4 extension): ")
-    # output_name = input("Enter the file name of the video to be output after edit in directory video-editor-output (without .mp4 extension): ")
-    # videoFileClip = VideoFileClip(f"background-videos-uncut/{video_name}.mp4")
-    # ########### EDIT CODE HERE 
-    # cropped = cropClip(videoFileClip, width/2-540, 0, width/2+540, height)
-    # result = resizeClip(cropped, 1080, 1920)
-    # outputClip(result, output_name)
-    # ########################################
-    # cropped.close()
-    # result.close()
-    # videoFileClip.close()
-
-if __name__ == "__main__":
-    main()

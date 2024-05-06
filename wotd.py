@@ -123,7 +123,7 @@ def createWOTDScene(language, wotd, pronounced, wordType, translation, exampleSe
     textClips.append(exampleSentenceTranslationClip)
 
     # VideoClip for please like an subscribe
-    subscribe = VideoFileClip("background-videos/general/1gif.gif", has_mask=True)
+    subscribe = VideoFileClip("background-videos/general/subscribe.gif", has_mask=True)
     subscribe = resizeClip(subscribe, 960, 540)
     subscribe = subscribe.set_position("center")
     subscribe = subscribe.subclip(1, subscribe.duration-1)
